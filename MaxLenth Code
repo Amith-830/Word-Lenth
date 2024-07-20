@@ -1,0 +1,24 @@
+void main() {
+  // Sample list of words
+  List<String> words = ['apple', 'banana', 'grapefruit', 'kiwi', 'orange'];
+
+  // Calculate the length of the longest word
+  int maxLength = 0;
+
+  for (int i = 0; i < words.length; i++) {
+    if (words[i].length > maxLength) {
+      maxLength = words[i].length;
+    }
+  }
+
+  // Calculate the average length of all words
+  double averageLength = 0.0;
+  for (int i = 0; i < words.length; i++) {
+    averageLength += words[i].length;
+  }
+  averageLength = words.isNotEmpty ? averageLength / words.length : 0.0;
+
+  // Output the results
+  print('Longest word length: $maxLength');
+  print('Average word length: ${averageLength.toStringAsFixed(2)}');
+}
